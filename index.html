@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGV Tools | Carlos González Vergara</title>
+    <style>
+        :root {
+            --bg: #f5f5f7;
+            --card-bg: #ffffff;
+            --text: #1d1d1f;
+            --secondary: #86868b;
+            --accent: #0066cc;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px 30px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .main-logo {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 19px;
+            color: var(--secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            padding-bottom: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .logo-container {
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            max-height: 100%;
+            max-width: 200px;
+            object-fit: contain;
+        }
+
+        .card h2 {
+            margin: 0 0 12px 0;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .card p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: var(--secondary);
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--accent);
+            letter-spacing: 0.5px;
+            background: rgba(0, 102, 204, 0.05);
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        footer {
+            padding: 30px 20px 40px; /* Tamaño vertical reducido */
+            font-size: 14px;
+            color: var(--secondary);
+            text-align: center;
+            line-height: 1.5;
+            width: 100%;
+            background-color: #ffffff;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .cc-logo {
+            height: 31px;
+            margin-bottom: 12px;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .cc-logo:hover {
+            opacity: 1;
+        }
+
+        .footer-info {
+            margin-top: 8px;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .email-link {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .email-link:hover {
+            color: #004499;
+            text-decoration: underline;
+        }
+
+        .footer-affiliation {
+            color: var(--secondary);
+            font-weight: 400;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="cgv.png" alt="cgv.tools" class="main-logo">
+    <p>Specialized software and tools for linguistic research and analysis.</p>
+</header>
+
+<div class="container">
+    
+    <a href="/telperion" class="card">
+        <div class="logo-container">
+            <img src="telperion.png" alt="Telperion Logo">
+        </div>
+        <h2>Telperion</h2>
+        <p>An interactive RRG tree builder for visualizing constituent and operator projections, and informative structure of the layered structure of the clause.</p>
+        <span class="tag">Syntax / RRG</span>
+    </a>
+
+    <a href="/ent" class="card">
+        <div class="logo-container">
+            <img src="ent_logo.png" alt="Ent Logo">
+        </div>
+        <h2>Ent</h2>
+        <p>A digital assistant for immediate constituent analysis, featuring clitic detection and practice modes.</p>
+        <span class="tag">Processing / Pedagogy</span>
+    </a>
+
+    <a href="/kilmer" class="card">
+        <div class="logo-container">
+            <img src="kilmer_logo.png" alt="Kilmer Logo">
+        </div>
+        <h2>Kilmer</h2>
+        <p>A visual WYSIWYG syntax tree builder specifically designed for Generative Grammar and constituent structures.</p>
+        <span class="tag">Generative Syntax</span>
+    </a>
+
+    <a href="/mak" class="card">
+        <div class="logo-container">
+            <img src="mak.png" alt="MAK Logo">
+        </div>
+        <h2>MAK</h2>
+        <p>A diagramming tool for labeling semantic roles and syntactic structures within Systemic Functional Linguistics.</p>
+        <span class="tag">Semantics / SFL</span>
+    </a>
+
+    <a href="/vendler" class="card">
+        <div class="logo-container">
+            <img src="vendler.png" alt="Vendler Logo">
+        </div>
+        <h2>Vendler</h2>
+        <p>An automated classification tool for Aktionsart and predicate types based on Vendlerian event typology.</p>
+        <span class="tag">Lexical Semantics</span>
+    </a>
+
+    <a href="/albura" class="card">
+        <div class="logo-container">
+            <img src="albura_logo.png" alt="Albura Logo">
+        </div>
+        <h2>Albura</h2>
+        <p>Specialized tool for mapping the Layered Structure of the Clause (LSC) and morphological projections in RRG.</p>
+        <span class="tag">LSC / RRG</span>
+    </a>
+
+</div>
+
+<footer>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+        <img alt="Creative Commons License" class="cc-logo" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+    </a>
+    <div class="footer-info">
+        Carlos González Vergara<br>
+        <a href="mailto:cgonzalv@uc.cl" class="email-link">(cgonzalv@uc.cl)</a>
+    </div>
+    <div class="footer-affiliation">
+        Facultad de Letras · Pontificia Universidad Católica de Chile
+    </div>
+</footer>
+
+</body>
+</html>
