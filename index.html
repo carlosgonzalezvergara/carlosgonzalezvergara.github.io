@@ -46,11 +46,13 @@
             font-weight: 400;
         }
 
+        /* Cambio a Flexbox para permitir el centrado de la última fila */
         .container {
             max-width: 1100px;
             width: 90%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 24px;
             padding-bottom: 40px;
         }
@@ -67,6 +69,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            width: 320px; /* Ancho fijo para mantener la consistencia visual */
         }
 
         .card:hover {
@@ -116,7 +119,7 @@
         }
 
         footer {
-            padding: 30px 20px 40px; /* Tamaño vertical reducido */
+            padding: 30px 20px 40px;
             font-size: 14px;
             color: var(--secondary);
             text-align: center;
@@ -211,17 +214,8 @@
             <img src="vendler.png" alt="Vendler Logo">
         </div>
         <h2>Vendler</h2>
-        <p>An automated classification tool for Aktionsart and predicate types based on Vendlerian event typology.</p>
+        <p>An automated classification tool for Aktionsart and predicate types based on RRG.</p>
         <span class="tag">Lexical Semantics</span>
-    </a>
-
-    <a href="https://albura.streamlit.app" class="card">
-        <div class="logo-container">
-            <img src="albura_logo.png" alt="Albura Logo">
-        </div>
-        <h2>Albura</h2>
-        <p>Specialized tool for mapping the Layered Structure of the Clause (LSC) and morphological projections in RRG.</p>
-        <span class="tag">LSC / RRG</span>
     </a>
 
 </div>
