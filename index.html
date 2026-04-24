@@ -131,9 +131,28 @@
             border-top: 1px solid rgba(0,0,0,0.05);
         }
 
+        /* Contenedor para alinear los logos del footer */
+        .footer-logo-brand {
+            height: 22px; /* Altura reducida para mayor elegancia */
+            width: auto;
+            opacity: 0.8; /* Unifica el tono con el logo de CC */
+            transition: opacity 0.2s;
+        }
+
+        .footer-logo-brand:hover {
+            opacity: 1;
+        }
+
+        .footer-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px; /* Espaciado más compacto */
+            margin-bottom: 15px;
+        }
+
         .cc-logo {
             height: 31px;
-            margin-bottom: 12px;
             opacity: 0.8;
             transition: opacity 0.2s;
         }
@@ -232,9 +251,14 @@
 </div>
 
 <footer>
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
-        <img alt="Creative Commons License" class="cc-logo" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg" />
-    </a>
+    <div class="footer-logos">
+        <img src="cgv-tools.png" alt="cgv.tools Logo" class="footer-logo-brand">
+        
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+            <img alt="Creative Commons License" class="cc-logo" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg" />
+        </a>
+    </div>
+    
     <div class="footer-info">
         Carlos González Vergara<br>
         <a href="mailto:cgonzalv@uc.cl" class="email-link">(cgonzalv@uc.cl)</a>
